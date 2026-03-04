@@ -53,7 +53,7 @@ WSL2では `qiita login` の認証情報がWindowsパスに保存されるため
 
 ```bash
 mkdir -p ~/.config/qiita-cli
-cp /mnt/c/Users/shimo/.config/qiita-cli/credentials.json ~/.config/qiita-cli/
+cp /mnt/c/Users/<Windowsユーザー名>/.config/qiita-cli/credentials.json ~/.config/qiita-cli/
 ```
 
 ### 2. wip/ のファイルを public/ にコピー
