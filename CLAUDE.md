@@ -41,10 +41,34 @@ qiita pull
 
 # 記事の投稿・更新
 qiita publish <article-id>
+```
 
-# ローカルプレビュー
+---
+
+## プレビュー手順 (WSL2環境)
+
+### 1. 認証情報をWSL2にコピー (初回のみ)
+
+WSL2では `qiita login` の認証情報がWindowsパスに保存されるため、手動でコピーが必要。
+
+```bash
+mkdir -p ~/.config/qiita-cli
+cp /mnt/c/Users/shimo/.config/qiita-cli/credentials.json ~/.config/qiita-cli/
+```
+
+### 2. wip/ のファイルを public/ にコピー
+
+```bash
+cp wip/<ファイル名>.md public/<ファイル名>.md
+```
+
+### 3. プレビューサーバー起動
+
+```bash
 qiita preview
 ```
+
+ブラウザで **http://localhost:8888** を開く。
 
 ---
 
